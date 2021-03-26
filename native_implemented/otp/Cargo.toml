@@ -15,20 +15,20 @@ liblumen_alloc = { path = "../../liblumen_alloc" }
 liblumen_core = { path = "../../liblumen_core" }
 lumen_rt_core = { path = "../../runtimes/core" }
 native_implemented = { path = "../macro" }
-num-bigint = "0.2"
+num-bigint = "0.3"
 num-traits = "0.2"
 radix_fmt = "1.0.0"
 thiserror = "1.0"
 
 [dependencies.hashbrown]
-version = "0.7"
+version = "0.9"
 features = ["nightly"]
 
 [target.'cfg(unix)'.dependencies]
-proptest = "0.9.3"
+proptest = "1.0"
 
 [target.'cfg(windows)'.dependencies]
-proptest = "0.9.3"
+proptest = "1.0"
 
 [target.'cfg(target_arch = "wasm32")'.dependencies.web-sys]
 version = "0.3.47"
@@ -39,7 +39,7 @@ libc = "0.2.74"
 lumen_rt_full = { path = "../../runtimes/full" }
 lumen = { path = "../../lumen" }
 panic-control = "0.1.4"
-process_control = "2.0.0"
+process_control = "3.0"
 # get rid of colors in backtraces for easier matching in integration tests
 strip-ansi-escapes = "0.1.0"
 

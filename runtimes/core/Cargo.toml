@@ -6,15 +6,17 @@ publish = false
 edition = "2018"
 
 [dependencies]
+# Errors
 anyhow = "1.0"
 thiserror = "1.0"
+
+cfg-if = "1.0"
 log = "0.4"
-cfg-if = "0.1.7"
 lazy_static = "1.4"
 libc = "0.2"
-num-bigint = "0.2"
+num-bigint = "0.3"
 num-traits = "0.2"
-num_enum = "0.4.2"
+num_enum = "0.5"
 radix_fmt = "1.0.0"
 chrono = "0.4"
 
@@ -26,7 +28,7 @@ version = "3.11"
 features = ["no_std"]
 
 [dependencies.hashbrown]
-version = "0.7"
+version = "0.9"
 features = ["nightly"]
 
 [dependencies.intrusive-collections]

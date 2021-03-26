@@ -7,17 +7,17 @@ edition = "2018"
 
 [dependencies]
 bus = "2.0"
-cfg-if = "0.1.7"
+cfg-if = "1.0"
 clap = "2.32.0"
-colored = "1.6"
+colored = "2.0"
 anyhow = "1.0"
 thiserror = "1.0"
 lazy_static = "1.2"
 libc = "0.2"
 log = "0.4"
-num-bigint = "0.2"
+num-bigint = "0.3"
 num-traits = "0.2"
-num_enum = "0.4.2"
+num_enum = "0.5"
 chrono = "0.4"
 
 liblumen_core = { path = "../../liblumen_core" }
@@ -25,22 +25,22 @@ lumen_rt_core = { path = "../core" }
 liblumen_alloc = { path = "../../liblumen_alloc" }
 
 [dependencies.hashbrown]
-version = "0.7"
+version = "0.9"
 features = ["nightly"]
 
 [target.'cfg(unix)'.dependencies]
-proptest = "0.9.3"
-rand = "0.6"
-signal-hook = "0.1"
+proptest = "1.0"
+rand = "0.8"
+signal-hook = "0.3"
 xorshift = "0.1"
 
 [target.'cfg(windows)'.dependencies]
-proptest = "0.9.3"
-rand = "0.6"
+proptest = "1.0"
+rand = "0.8"
 xorshift = "0.1"
 
 [target.'cfg(target_arch = "wasm32")'.dependencies]
-rand = { version = "0.6", features = ["wasm-bindgen"] }
+rand = { version = "0.8", features = ["getrandom"] }
 xorshift = "0.1"
 
 # for debugging
